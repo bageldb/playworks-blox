@@ -21,7 +21,7 @@ export function createHomepage(snapshot) {
     slug: '/', title: 'Play.Works', status: 'draft',
     meta_title: 'Play.Works is the #1 provider of CTV Games and Original TV Channels.',
     content: { blocks: [
-      block('PlayNavigation'),
+      block('PlayNavigation', { blue_background: false }),
       block('MediaHero', { video: top.mainVideoLink, title: top.onVideoHeader || '', subtitle: top.onVideoSubtitle || '', cta_label: top.onVideoCTA || '', cta_href: top.onVideoCTALink || '' }),
       block('PlayIntro', { title: 'Games - Creators - TV', subtitle: "It's Play.Works", stats: [
         { value: 150, suffix: '+', label: 'Creators' },

@@ -5,18 +5,20 @@ import { $, Btn, defineSchema } from '@bagelink/vue'
 import { imageField, mediaUrl } from '@bageldb/blox-renderer/media'
 interface Link { label?: string; href?: string }
 interface Group { label?: string; links?: Link[]; decoration?: unknown }
-interface Props { logo?: unknown; logo_alt?: string; home_href?: string; groups?: Group[]; cta_label?: string; cta_href?: string; menu_label?: string; close_label?: string }
+interface Props { blue_background?: boolean; logo?: unknown; logo_alt?: string; home_href?: string; groups?: Group[]; cta_label?: string; cta_href?: string; menu_label?: string; close_label?: string }
 defineBlock({
 	name: 'PlayNavigation', label: 'Play.Works navigation', category: 'layout', icon: 'menu', global: true,
 	schema: defineSchema({
+		blue_background: $.checkbox('Blue background', { default: true }),
 		logo: imageField(), logo_alt: $.text('Logo alt'), home_href: $.text('Home link'),
 		groups: $.array('Navigation groups', defineSchema({ label: $.text('Label'), decoration: imageField(), links: $.array('Links', defineSchema({ label: $.text('Label'), href: $.text('Link') }), { allowReorder: true }) }), { allowReorder: true }),
 		cta_label: $.text('Button'), cta_href: $.text('Button link'), menu_label: $.text('Open menu label'), close_label: $.text('Close menu label'),
 	}),
 })
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), { blue_background: undefined })
 const { data } = useGlobalBlock<Props & Record<string, unknown>>('PlayNavigation')
 const content = computed(() => ({ ...props, ...data.value }))
+const blueBackground = computed(() => props.blue_background ?? content.value.blue_background ?? true)
 const safeHref = (value?: string) => {
 	try { const url = new URL(value || '', 'https://playworks.invalid'); return ['http:', 'https:', 'mailto:', 'tel:'].includes(url.protocol) ? value : undefined } catch { return undefined }
 }
@@ -25,8 +27,8 @@ const open = ref(false)
 function close() { open.value = false; tab.value = -1 }
 </script>
 <template>
-	<header class="playworks pw-navigation" @keydown.esc="close">
-		<div class="menu-back-wrap"><div class="menu-back" /></div>
+	<header class="playworks pw-navigation" :class="{ 'pw-navigation-bare': !blueBackground }" @keydown.esc="close">
+		<div v-if="blueBackground" class="menu-back-wrap"><div class="menu-back" /></div>
 		<div class="top-menu" @mouseleave="tab = -1">
 			<a :href="safeHref(content.home_href || '/')" class="top-logo"><img :src="mediaUrl(content.logo)" :alt="content.logo_alt || ''" /></a>
 			<nav class="nav-links-wrap" :class="{ 'open-nav': open }" aria-label="Main navigation">
@@ -47,3 +49,7 @@ function close() { open.value = false; tab.value = -1 }
 		</div>
 	</header>
 </template>
+
+<style scoped>
+.playworks.pw-navigation-bare { background: transparent; }
+</style>
