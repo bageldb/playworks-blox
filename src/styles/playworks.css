@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500;1,600;1,900&display=swap");
+
+/* Legacy Play.Works geometry. Every selector stays inside its page block. */
+.playworks { font-family: "Montserrat", sans-serif; font-size: 16px; line-height: 1.3; color: #000; background: #fff; text-align: left; }
+.playworks, .playworks * { box-sizing: border-box; }
+.playworks img { max-width: 100%; vertical-align: middle; display: inline-block; border: 0; user-select: none; }
+.playworks a { background-color: transparent; cursor: pointer; display: inline-block; }
+.playworks p { margin: 1em 0; }
+.playworks .btn { display: inline-flex; align-items: center; justify-content: center; background: #ed4b4b; color: white; font-family: inherit; font-weight: 900; font-style: italic; text-decoration: none; padding: 10px 20px; border-radius: 30px; font-size: 20px; line-height: 1.3; min-height: 0; height: auto; cursor: pointer; transition: 400ms all ease; border: none; box-shadow: 0 0 0 0 #ed4b4b; gap: 0; }
+.playworks .btn:hover { filter: brightness(90%); box-shadow: 0 0 0 10px transparent; }
+.playworks .btn.bigger { font-size: 30px; padding: 13px 50px; border-radius: 50px; }
+.playworks .btn.blue { background: #27568b; box-shadow: 0 0 0 0 #27568b; }
+.playworks .btn.blue:hover { box-shadow: 0 0 0 10px transparent; }
+.playworks .txt60 { font-size: 60px; font-weight: 900; font-style: italic; line-height: 1; margin: 0; }
+.playworks .txt90 { font-size: 90px; font-style: italic; font-weight: 900; margin: 0; color: #27568b; }
+.playworks .txt30 { font-size: 30px; font-weight: 900; font-style: italic; margin: 0; }
+.playworks .red { color: #ed4b4b; }
+.playworks .txt18 { font-size: 18px; line-height: 1.6; }
+.playworks .w700 { max-width: 700px; width: 90%; margin: 0 auto; }
+.playworks .w900 { max-width: 900px; width: 90%; margin: 0 auto; }
+.playworks .hero-video-title, .playworks .hero-video-sub, .playworks .pw-lines { white-space: pre-line; }
+
+/* A removable navigation block overlays the first 90px of the video. */
+.playworks.pw-navigation { position: relative; height: 90px; z-index: 20; background: #000; }
+.playworks.pw-navigation + .playworks.pw-media-hero { margin-top: -90px; }
+.playworks .menu-back { background: linear-gradient(45deg, #27568b 0%, #316db0 100%); position: absolute; width: 120%; border-bottom-left-radius: 100px; transform: translate(30px, -75px) rotate(-3deg); height: 100%; }
+.playworks .menu-back-wrap { overflow: hidden; position: absolute; z-index: 0; min-height: 300px; width: 100%; top: -100px; pointer-events: none; }
+.playworks .top-menu { max-width: 1200px; width: 90%; margin: 0 auto; position: relative; display: flex; align-items: center; justify-content: space-between; height: 90px; }
+.playworks .close-menu, .playworks .menu, .playworks .manu-background { display: none; }
+.playworks .top-drop { background: transparent; border: 0; padding: 0; min-height: 0; height: auto; color: white; font-family: inherit; font-weight: 900; font-style: italic; display: inline-block; margin: 0 20px; font-size: 20px; cursor: pointer; transition: 200ms all ease; border-radius: 0; }
+.playworks .top-drop:hover { filter: brightness(90%); }
+.playworks .nav-links-wrap { display: inline-block; position: relative; }
+.playworks .top-btn { margin-left: 20px; }
+.playworks .top-cont { position: absolute; display: none; background: white; box-shadow: 0 0 30px 0 #00000026; border-radius: 40px; width: 100%; height: 255px; margin-top: 20px; transition: 200ms all ease; z-index: 5; }
+.playworks .top-cont.open { display: block; color: white; }
+.playworks .top-cont.open::after { content: ""; width: 40px; height: 40px; transform: rotate(45deg); background: #ed4b4b; position: absolute; top: -12px; z-index: 2; left: 38px; }
+.playworks .top-cont.open:nth-child(4)::after { left: 140px; }
+.playworks .top-cont.open:nth-child(6)::after { left: 250px; }
+.playworks .drop.wrap { display: inline-block; }
+.playworks .drop-link { color: #27568b; font-size: 20px; font-weight: 900; font-style: italic; text-decoration: none; transition: 200ms all ease; display: block; margin-bottom: 15px; }
+.playworks .drop-link:hover { filter: brightness(80%); color: #ed4b4b; }
+.playworks .menu-tab1-img { position: absolute; top: 20px; right: 9%; z-index: 3; width: 190px; transform: rotate(20deg); }
+.playworks .top-cont-inner { overflow: hidden; position: relative; padding: 30px; height: 255px; background: white; border-radius: 40px; z-index: 5; }
+.playworks .tab-icon-2 { position: absolute; top: 20px; right: 5%; z-index: 3; width: 200px; transform: rotate(20deg); }
+.playworks .tab-icon-3 { width: 195px; right: 15%; position: absolute; }
+
+.playworks .hero-video-wrap { position: relative; width: 100%; height: 46vw; min-height: 560px; max-height: 720px; overflow: hidden; background: #000; display: flex; flex-direction: column; padding-top: 90px; }
+.playworks .hero-video { position: absolute; top: 90px; left: 0; width: 100%; height: calc(100% - 90px); object-fit: cover; z-index: 0; opacity: .9; }
+.playworks .hero-video-overlay { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to right, #000 0%, transparent 18%, transparent 82%, #000 100%), linear-gradient(to bottom, #000 0%, transparent 28%, transparent 62%, #000 100%), radial-gradient(ellipse at center, #00000026 45%, #0009 100%); }
+.playworks .hero-video-content { position: relative; z-index: 2; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90%; max-width: 860px; margin: 0 auto; text-align: center; padding: 20px; }
+.playworks .hero-video-textbox { position: relative; }
+.playworks .hero-video-title { color: #fff; font-weight: 900; font-style: italic; text-transform: uppercase; line-height: 1; font-size: clamp(34px, 5.3vw, 76px); margin: 0 0 24px; filter: drop-shadow(0 0 20px #000b); text-wrap: balance; }
+.playworks .hero-video-sub { color: #fff; font-weight: 500; font-style: italic; line-height: 1.3; font-size: clamp(18px, 2.5vw, 36px); margin: 0; text-wrap: balance; }
+.playworks .hero-video-btn-wrap { position: relative; z-index: 4; text-align: center; margin-top: -24px; }
+.playworks .hero-video-btn { display: inline-block; }
+
+.playworks .who-sec { max-width: 1170px; margin: 60px auto; position: relative; width: 90%; }
+.playworks .who-preview { text-align: center; margin-left: 0; padding: 0; }
+.playworks .who-preview-title { margin: 0 0 12px; }
+.playworks .who-preview-sub { font-size: clamp(22px, 2.5vw, 36px); font-weight: 500; font-style: italic; color: #27568b; margin: 0 0 20px; }
+.playworks .num-info-wrap { max-width: 1170px; display: flex; justify-content: center; flex-wrap: wrap; margin: 10px auto; }
+.playworks .big-num { color: #27568b; font-weight: 900; font-style: italic; font-size: 90px; margin: 0; line-height: 1; min-width: 260px; }
+.playworks .num-box { text-align: center; margin: 30px; }
+.playworks .small-num-txt { font-size: 28px; color: #ff3344; margin: 0; font-style: italic; font-weight: 600; }
+.playworks .scroll-apps { margin: 50px 0; padding: 10px 0; overflow: hidden; }
+.playworks .app-scroll { height: 150px; width: auto; max-width: none; border-radius: 20px; flex-shrink: 0; display: block; }
+.playworks .scroll-apps-wrap { display: flex; width: max-content; will-change: transform; backface-visibility: hidden; animation: pw-scroll-apps 60s linear infinite; margin: 10px 0; }
+.playworks .scroll-apps-track { display: flex; flex-shrink: 0; align-items: center; gap: 20px; padding-inline-end: 20px; }
+.playworks .scroll-apps-wrap.rev { animation-direction: reverse; }
+@keyframes pw-scroll-apps { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+
+.playworks .news-preview-sec { max-width: 1170px; width: 90%; margin: 70px auto 0; }
+.playworks .news-preview-featured-inner { display: flex; align-items: flex-start; gap: 40px; }
+.playworks .news-fade-enter-active, .playworks .news-fade-leave-active { transition: opacity 400ms ease, transform 400ms ease; }
+.playworks .news-fade-enter-from { opacity: 0; transform: translateY(16px); }
+.playworks .news-fade-leave-to { opacity: 0; transform: translateY(-16px); }
+.playworks .news-preview-img-wrap { flex: 0 0 57%; max-width: 668px; display: block; border-radius: 30px; overflow: hidden; aspect-ratio: 668 / 350; background: #f2f2f2; }
+.playworks .news-preview-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.playworks .news-preview-txt { flex: 1 1 auto; padding-top: 10px; }
+.playworks .news-preview-title { display: block; color: #000; font-weight: 900; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.3; text-decoration: none; text-wrap: balance; margin-bottom: 16px; }
+.playworks .news-preview-title:hover { color: #ed4b4b; }
+.playworks .news-preview-desc { color: #000; font-size: 16px; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 16px; }
+.playworks .news-preview-desc * { margin: 0 !important; text-align: start !important; font-size: 16px !important; line-height: 1.6 !important; color: #000 !important; font-weight: 400 !important; display: inline !important; }
+.playworks .news-preview-desc br { display: none !important; }
+.playworks .news-preview-date { color: #000; font-size: 16px; margin: 0; }
+.playworks .news-preview-thumbs { display: flex; gap: 28px; margin-top: 40px; }
+.playworks .news-preview-thumb { display: block; flex: 1 1 0; max-width: 172px; aspect-ratio: 172 / 90; padding: 0; border: none; border-radius: 10px; overflow: hidden; cursor: pointer; background: #f2f2f2; opacity: .4; transition: opacity 300ms ease, transform 300ms ease; min-width: 0; min-height: 0; height: auto; }
+.playworks .news-preview-thumb:hover { opacity: .75; }
+.playworks .news-preview-thumb.active { opacity: 1; transform: scale(1.06); }
+.playworks .news-preview-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.playworks .news-preview-btn-wrap { text-align: center; margin-top: 40px; }
+
+.playworks .partners-sec { text-align: center; max-width: 1110px; margin: 40px auto; width: 90%; padding-block: 3rem; }
+.playworks .partner-logo { max-width: 110px; height: 36px; margin: 15px; transition: 200ms all ease; object-fit: scale-down; }
+.playworks .partner-logo.big { height: auto; max-height: 70px; margin: 20px; max-width: 150px; }
+.playworks .small-logos-wrap { display: flex; flex-wrap: wrap; justify-content: center; }
+.playworks .influencers-sec-wrap { width: 100%; overflow: hidden; }
+.playworks .influencers-sec { max-width: 1170px; margin: 60px auto; width: 90%; position: relative; padding-left: 90px; overflow: visible; display: flex; }
+.playworks .side-head-wrap { width: 330px; height: 310px; border-radius: 30px; background: #27568b; padding: 30px; color: white; display: flex; align-items: flex-end; flex-shrink: 0; margin-left: -90px; position: relative; z-index: 2; }
+.playworks .side-head-wrap.influ { background: #ed4b4b; margin-top: 120px; }
+.playworks .influ .txt60 { font-size: 40px; line-height: 1.2; }
+.playworks .influencers-flex { display: flex; flex-direction: column; align-items: center; margin-inline-start: -3rem; }
+.playworks .influ-img { margin-bottom: -4rem; position: relative; z-index: 1; }
+.playworks .influ-txt-box { padding: 60px; border-radius: 30px; background: #fef2df; max-width: 900px; position: relative; margin-inline: 1rem; }
+.playworks .influ-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 30px; }
+.playworks .influ-cta-row .influ-btn { margin-top: 0; }
+.playworks .influ-icon { position: absolute; bottom: 20px; right: -130px; width: 250px; transform: rotate(13deg); }
+.playworks .games-sec { position: relative; background-color: #fbfbfb; text-align: center; padding: 130px 30px 10rem; margin: -1rem 0 90px; background-position: center; }
+.playworks .games-home-wrap { max-width: 1200px; margin: 30px auto; width: 90%; display: flex; justify-content: center; flex-wrap: wrap; }
+.playworks .game-home-box { box-shadow: 0 0 30px 0 #00000026; background: white; padding: 20px 40px; border-radius: 20px; text-align: left; margin: 30px 10px; flex-basis: 30%; min-width: 260px; }
+.playworks .game-img-box { width: 130px; height: 130px; margin-top: -60px; margin-bottom: 30px; border-radius: 20px; object-fit: cover; }
+.playworks .game-box-txt { margin: 1em 0; font-size: 18px; line-height: 1.5; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; }
+.playworks .game-box-txt p { margin: 0; }
+.playworks .big-vid-wrap { max-width: 1100px; width: 90%; margin: 0 auto; }
+.playworks .big-vid-wrap.newhome { margin-top: -10rem; }
+.playworks .big-vid { position: relative; margin: 30px auto; padding-top: 56.25%; }
+.playworks .big-vid iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 10px; }
+.playworks .footer { max-width: 1170px; width: 90%; margin: 50px auto; padding-bottom: 20px; }
+.playworks .footer-box { background: linear-gradient(45deg, #27568b 0%, #316db0 100%); border-radius: 30px; padding: 10px; box-shadow: 0 0 30px 0 #00000026; text-align: center; color: white; }
+.playworks .footer-links-wrap { margin-top: 10px; }
+.playworks .bagel img { filter: invert(100%); width: 100px; }
+.playworks .bagel { float: right; }
+.playworks .footer-link { color: black; text-decoration: none; margin-right: 20px; }
+.playworks .footer-link.red { color: #ed4b4b; font-weight: 600; }
+
+@media screen and (max-width: 991px) {
+	.playworks .menu-back { transform: translate(0, -75px) rotate(-3deg); }
+	.playworks .scroll-apps { margin: 40px 0 50px; }
+	.playworks .games-home-wrap { flex-direction: column; max-width: 400px; }
+	.playworks .game-home-box { margin: 50px 10px 10px; }
+	.playworks .games-sec { padding: 100px 10px 10rem; }
+	.playworks .games-btn { transform: translateY(40px); }
+	.playworks .influ-icon { width: 200px; right: -50px; }
+	.playworks .side-head-wrap { width: 220px; height: 200px; margin-left: 0; margin-top: -20px; margin-bottom: 20px; }
+	.playworks .side-head-wrap.influ { margin-top: 40px; width: 250px; min-height: 250px; }
+	.playworks .influ .txt60 { font-size: 28px; }
+	.playworks .influencers-sec { display: block; }
+	.playworks .influencers-flex { margin-inline-start: 0; }
+	.playworks .influ-img { margin-top: -3rem; }
+}
+@media screen and (max-width: 900px) {
+	.playworks.pw-navigation { height: 55px; }
+	.playworks.pw-navigation + .playworks.pw-media-hero { margin-top: -55px; }
+	.playworks .top-menu { height: 55px; }
+	.playworks .hero-video-title { line-height: 1.2; }
+	.playworks .hero-video-wrap { height: auto; min-height: 460px; max-height: none; padding-top: 55px; }
+	.playworks .hero-video { top: 55px; height: calc(100% - 55px); }
+	.playworks .hero-video-content { padding: 100px 20px; }
+	.playworks .news-preview-img-wrap { flex-basis: auto; width: 100%; max-width: none; }
+	.playworks .news-preview-thumbs { gap: 12px; overflow-x: auto; padding-bottom: 14px; }
+	.playworks .news-preview-thumb { flex: 0 0 30%; }
+	.playworks .news-preview-featured-inner { display: block; }
+	.playworks .news-preview-title { margin-bottom: 0; margin-top: 10px; }
+}
+@media screen and (max-width: 767px) {
+	.playworks .game-box-txt { -webkit-line-clamp: 30; margin: 0; }
+	.playworks .manu-background { position: fixed; inset: 0; transition: all ease .2s; }
+	.playworks .open-nav + .manu-background { display: block; background: #000b; }
+	.playworks .top-cont.open::after { background: transparent; }
+	.playworks .menu { display: block; background: transparent; padding: 10px; color: white; }
+	.playworks .menu .icon { font-size: 40px; }
+	.playworks .nav-links-wrap { position: fixed; height: 100dvh; width: 280px; top: 0; z-index: 99999; left: auto; right: -280px; background: #27568b; transition: 200ms all ease; text-align: center; visibility: hidden; }
+	.playworks .nav-links-wrap.open-nav { right: 0; visibility: visible; }
+	.playworks .top-cont { display: block; position: relative; height: auto; background: transparent; box-shadow: none; border-radius: 0; }
+	.playworks .menu-tab1-img, .playworks .tab-icon-2, .playworks .tab-icon-3 { display: none; }
+	.playworks .top-cont-inner { height: auto; padding: 0; background: transparent; border-radius: 0; }
+	.playworks .top-drop { opacity: .7; margin: 10px 10px 0; display: block; border-top: 1px solid white; padding-top: 11px; font-size: 18px; }
+	.playworks .drop-link { color: white; font-size: 14px; }
+	.playworks .drop.wrap { text-align: center; width: 100%; max-height: calc(100dvh - 140px); overflow-y: auto; }
+	.playworks .top-btn { margin-left: auto; margin-right: auto; }
+	.playworks .close-menu { display: block; background: transparent; padding: 20px; color: white; }
+	.playworks .top-logo img { width: 65px; margin-left: 10px; }
+	.playworks .btn.bigger { font-size: 20px; padding: 13px 30px; }
+	.playworks .footer-box { display: none; }
+	.playworks .app-scroll { height: 100px; border-radius: 10px; }
+	.playworks .scroll-apps { margin: 20px 0; }
+	.playworks .big-num { font-size: 60px; }
+	.playworks .small-num-txt { font-size: 22px; }
+	.playworks .num-box { margin: 20px; }
+	.playworks .txt60 { font-size: 30px; }
+	.playworks .txt90 { font-size: 50px; }
+	.playworks .partner-logo { max-width: 140px; height: 40px; }
+	.playworks .partner-logo.big { max-height: 60px; margin: 10px; }
+	.playworks .influencers-sec { padding-left: 0; margin: 40px auto; overflow: visible; }
+	.playworks .influ-icon { width: 160px; bottom: 0; right: 0; }
+	.playworks .influ-txt-box { padding: 60px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.playworks .scroll-apps-wrap { animation: none; }
+	.playworks .news-fade-enter-active, .playworks .news-fade-leave-active { transition: none; }
+}

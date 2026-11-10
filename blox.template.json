@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "build_command": "bash scripts/netlify-build.sh",
+  "publish_directory": "dist",
+  "manifest_path": ".blox-manifest.json",
+  "required_environment": [
+    "BLOX_API_URL",
+    "BLOX_BUILD_TOKEN",
+    "BLOX_WEBSITE_ID"
+  ]
+}

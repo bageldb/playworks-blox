@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="26px" viewBox="0 0 27 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Star</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="13.4428711 20.9143066 5.83524234 24.9138738 7.28817015 16.4426547 1.1334692 10.443304 9.63905672 9.20736976 13.4428711 1.5 17.2466855 9.20736976 25.752273 10.443304 19.597572 16.4426547 21.0504998 24.9138738"></polygon>
+    </defs>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Star">
+            <path stroke="#FFFC90" stroke-width="4" d="M18.3942378,21.2578427 L17.4486109,15.7444149 L21.4543507,11.8397836 L15.9185544,11.0353853 L13.4428711,6.01910292 L10.9671877,11.0353853 L5.43139148,11.8397836 L9.43713129,15.7444149 L8.49150439,21.2578427 L13.4428711,18.6547552 L18.3942378,21.2578427 Z" stroke-linejoin="square"></path>
+            <use stroke="#000000" stroke-width="2" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

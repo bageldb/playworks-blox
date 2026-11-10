@@ -1,0 +1,36 @@
+{
+  "name": "playworks-blox",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && bun run build:manifest && bun run build:prerender && bun run ssg && bun run assert:output",
+    "build:manifest": "node scripts/build-manifest.mjs",
+    "build:prerender": "vite build --ssr",
+    "ssg": "blox-ssg /",
+    "assert:output": "test -f dist/index.html && test -f dist/.blox-manifest.json",
+    "preview": "vite preview",
+    "test": "node --test scripts/playworks/content.test.mjs scripts/playform-test.mjs"
+  },
+  "dependencies": {
+    "@bageldb/blox-renderer": "github:bageldb/blox-renderer#67a193082f6295dcea1169d44d56393f155dc969",
+    "@bagelink/blox": "1.20.64",
+    "@bagelink/vue": "1.20.9",
+    "pinia": "^3.0.4",
+    "sanitize-html": "^2.18.1",
+    "vue": "3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/sanitize-html": "^2.16.2",
+    "@vitejs/plugin-vue": "^6",
+    "@vue/compiler-sfc": "3.5.44",
+    "esbuild": "^0.28.2",
+    "happy-dom": "latest",
+    "postcss": "^8",
+    "typescript": "^5",
+    "vite": "^8",
+    "vue-tsc": "^3"
+  }
+}

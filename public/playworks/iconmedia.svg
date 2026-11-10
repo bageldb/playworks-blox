@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="28px" viewBox="0 0 27 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>iconmedia</title>
+    <desc>Created with Sketch.</desc>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Games-Copy" transform="translate(-917.000000, -1018.000000)">
+            <g id="Group-3" transform="translate(500.000000, 847.000000)">
+                <g id="iconmedia" transform="translate(417.000000, 171.500000)">
+                    <path d="M13,26.5 C5.83194444,26.5 0,20.6680556 0,13.5 C0,6.33194444 5.83194444,0.5 13,0.5 C20.1680556,0.5 26,6.33194444 26,13.5 C26,20.6680556 20.1680556,26.5 13,26.5 Z M13.5,4.5 C8.26184615,4.5 4,8.76184615 4,14 C4,19.2381538 8.26184615,23.5 13.5,23.5 C18.7381538,23.5 23,19.2381538 23,14 C23,8.76184615 18.7381538,4.5 13.5,4.5 Z" id="Shape" fill="#FFFC90" fill-rule="nonzero"></path>
+                    <path d="M1.31591453,16.4170197 C2.58901741,22.1921841 7.56078547,26.5 13.5,26.5 C20.4035594,26.5 26,20.6797017 26,13.5 C26,6.32029825 20.4035594,0.5 13.5,0.5 C8.32888941,0.5 3.89117149,3.76562839 1.98953572,8.42208812 M1.04956497,12.3343708 C1.01675589,12.7183566 1,13.1071432 1,13.5" id="Shape" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                    <polygon id="Triangle" stroke="#000000" stroke-width="2" stroke-linejoin="round" transform="translate(14.500000, 14.500000) rotate(-270.000000) translate(-14.500000, -14.500000) " points="14.5 10.5 20 18.5 9 18.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
